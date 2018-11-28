@@ -6,8 +6,7 @@ URL_ROOT = 'https://www.eurolab.ua'
 URL_PAGE = URL_ROOT + '/diseases/list/page/'
 MAX_PAGE = 28
 
-def get_diseases():
-    diseases = {}
+def get_diseases(diseases):
     for page in range(1, MAX_PAGE + 1):
         diseases_on_page = get_diseases_from_list(URL_PAGE + str(page))
         diseases.update(diseases_on_page)
