@@ -1,9 +1,8 @@
 import random 
 import json
+import disspec
 
-BASE_FILENAME = 'supplies/diseases_short.json'
-with open(BASE_FILENAME) as file:
-	diseases = sorted(json.load(file).keys())
+diseases = sorted(disspec.diseases_specialties.keys())
 
 def diseas():
     return random.choice(diseases)
